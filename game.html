@@ -1,0 +1,24 @@
+<script>
+  (function() {
+
+  while (true) {
+    var answer = 3485;
+
+    var guess = prompt('Guess how many times I have visited my Grandmother. Please.');
+    guess = parseInt(guess);
+      if (guess === answer) {
+        alert('Damn, yo.  You got it!');
+        break;
+
+      } else if (guess < answer) {
+        alert('You kidding me?  Guess again.');
+
+      } else if (guess > answer) {
+        alert('Too high, man!  I have shit to do!');
+
+      } else {
+        alert('That\'s not a damn number, idiot!');
+      }
+    }
+  })();
+</script>
