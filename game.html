@@ -4,20 +4,31 @@
 
   var guess = prompt('Guess how many times I have visited my Grandmother. Please.');
 
-  while (true) {
+  var total = 0;
+
+  while (true) {   
     guess = parseInt(guess);
       if (guess === answer) {
         alert('Damn, yo.  You got it!');
+        total += 1;
+          if (total === 1) {
+            document.write('Interesting. It took you ' + total + ' attempt.');
+          } else {
+            document.write('Interesting. It took you ' + total + ' attempts.');
+          } 
         break;
-
+        
       } else if (guess < answer) {
         guess = prompt('You kidding me?  Guess again.');
+        total += 1;
 
       } else if (guess > answer) {
         guess = prompt('Too high, man!  I have shit to do!');
+        total += 1; //same thing as "new total = old total + 1, written as total = total + 1"
 
       } else {
         guess = prompt('That\'s not a damn number, idiot!');
+        total += 1;
       }
     }
   })();
